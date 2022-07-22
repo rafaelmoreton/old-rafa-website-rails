@@ -53,8 +53,9 @@ a:visited {
     width: 70%;
 }
 
-.content > div h2 {
+.content > div > h1 {
     text-align: center;
+    font-size: 4em;
 }
 
 .intro {
@@ -66,9 +67,7 @@ a:visited {
 }
 
 .intro h1 {
-    font-size: 4em;
     margin-bottom: 0px;
-    text-align: center;
 }
 
 .intro p {
@@ -87,6 +86,37 @@ a:visited {
     justify-content: center;
 }
 
-.projects-grid div {
+.project-item {
     border: 2px solid black;
+    display: grid;
+    grid-template-areas:
+    'title title'
+    'description picture'
+    'links picture';
+    grid-template-rows: 45px fit-content 40px;
+    grid-template-columns: 70%;
+}
+
+.project-item > h1 {
+    grid-area: title;
+    margin: 0;
+    padding: 5px;
+    background-color: rgb(255, 119, 133);
+}
+
+.project-item > p {
+    grid-area: description;
+    margin: 0;
+    padding: 10px;
+    text-align: justify;
+}
+
+.project-item > div {
+    grid-area: links;
+    padding: 10px;
+}
+
+.project-item > img {
+    grid-area: picture;
+    border: 1px solid black;
 }

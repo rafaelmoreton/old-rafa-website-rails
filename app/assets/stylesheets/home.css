@@ -120,3 +120,23 @@ a:visited {
     grid-area: picture;
     border: 1px solid black;
 }
+
+.about-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+}
+
+.about-container > div {
+    width: max(400px, 50vw);
+}
+
+.about-container > img {
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}

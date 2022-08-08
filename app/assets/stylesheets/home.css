@@ -81,6 +81,15 @@ a:visited {
     font-size: 1.5em;
 }
 
+.stack-icons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 500px;
+    flex-wrap: wrap;
+}
+
 .projects {
     width: 100%;
 }

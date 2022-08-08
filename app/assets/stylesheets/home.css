@@ -7,7 +7,7 @@
 /* ####################################### */
 
 :root {
-    --green: rgb(0, 130, 67);
+    --green: hsl(151, 100%, 20%);
 }
 
 /* ####################################### */
@@ -31,19 +31,20 @@ a:visited {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: var(--green);
-    color: white;
+    background-color: bisque;
+    color: hsl(8.1, 100%, 60.8%);
     height: 50px;
     font-size: 1.2em;
+    border-bottom: 4px solid hsl(8.1, 100%, 60.8%);
 }
 
-.navbar-right a {
+.navbar > div > a {
     padding: 14px 10px;
 }
 
-.navbar-right a:hover {
-    background-color: white;
-    color: rgb(0, 130, 67);
+.navbar > div > a:hover {
+    background-color: hsl(8.1, 100%, 60.8%);
+    color: bisque;
 }
 
 /* ####################################### */
@@ -52,15 +53,34 @@ a:visited {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    background-color: bisque;
 }
 
 .content > div {
-    width: 70%;
+    width: 100%;
 }
 
-.content > h1 {
-    font-size: 4em;
+.content > div:nth-child(odd) {
+    background-color: var(--green);
+    color: bisque;
+}
+
+.content > div:nth-child(even) {
+    color: rgb(58, 58, 58);
+}
+
+.content > div:not(:first-of-type) {
+    padding-bottom: 75px;
+}
+
+.content > div > h1 {
+    font-size: 4.5em;
+    text-align: center;
+    color: hsl(8.1, 100%, 60.8%);
+}
+
+.content > div:first-of-type > h1 {
+    font-size: 6em;
 }
 
 .intro {
@@ -99,10 +119,12 @@ a:visited {
     grid-template-columns: repeat(auto-fit, minmax(350px, 0.8fr));
     gap: 10px;
     justify-content: center;
+    padding-left: 15vw;
+    padding-right: 15vw;
 }
 
 .project-item {
-    border: 2px solid black;
+    border: 2px solid hsl(8.1, 100%, 60.8%);
     display: grid;
     grid-template-areas:
     'title title'
@@ -115,8 +137,9 @@ a:visited {
 .project-item > h1 {
     grid-area: title;
     margin: 0;
+    color: bisque;
     padding: 5px;
-    background-color: rgb(255, 119, 133);
+    background-color: hsl(8.1, 100%, 60.8%);
 }
 
 .project-item > p {
@@ -133,7 +156,7 @@ a:visited {
 
 .project-item > img {
     grid-area: picture;
-    border: 1px solid black;
+    border: 1px solid hsl(8.1, 100%, 60.8%);
 }
 
 .about-container {
@@ -156,7 +179,7 @@ a:visited {
     height: 150px;
 }
 
-.resume-container {
+.resume-grid {
     display: grid;
     grid-template-areas:
     "summary experience"
@@ -164,15 +187,17 @@ a:visited {
     "education experience";
     grid-template-columns: 0.3fr 0.7fr;
     column-gap: 5vw;
+    padding-left: 15vw;
+    padding-right: 15vw;
 }
 
-.resume-container > div > h2 {
+.resume-grid > div > h2 {
     color: var(--green);
     text-transform: uppercase;
     font-size: 1.8em;
 }
 
-.resume-container > div > h3 {
+.resume-grid > div > h3 {
     color: var(--green);
     margin-bottom: 0;
     font-size: 1.4em;
@@ -233,7 +258,7 @@ a:visited {
     margin-top: 0;
 }
 
-.contact-container {
+.contact-grid {
     display: grid;
     grid-template: repeat(3, auto) / 1fr 1fr;
     column-gap: 5vw;
@@ -259,38 +284,28 @@ a:visited {
     display: flex;
     gap: 10px;
     align-items: center;
-    
 }
 
 .contact-item.first-column {
     justify-self: flex-end;
 }
 
-.contact-container > a {
+.contact-grid > a {
     display: flex;
     justify-content: space-evenly;
-    border: 1px solid var(--green);
+    border: 3px solid bisque;
+    font-weight: bold;
     text-align: center;
     padding: 10px;
     width: 200px;
 }
 
-.contact-container p {
+.contact-grid p {
     margin: 0;
 }
 
-.contact-container > a:hover {
-    background-color: var(--green);
-    color: white;
-    font-weight: bold;
+.contact-grid > a:hover {
+    background-color: bisque;
+    color: var(--green);
     text-decoration: underline;
-}
-
-.separator {
-    height: 10px;
-    background-color: var(--green);
-}
-
-.separator:not(#projects-anchor) {
-    margin-top: 100px;
 }

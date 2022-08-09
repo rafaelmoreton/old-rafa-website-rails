@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700&family=Source+Sans+Pro:wght@200;400;700&family=Spectral:wght@200;300;500&display=swap');
 
 * {
     font-family: 'Source Sans Pro', sans-serif;
@@ -7,7 +7,8 @@
 /* ####################################### */
 
 :root {
-    --green: hsl(151, 100%, 20%);
+    --green: hsl(151, 100%, 25%);
+    --orange: rgb(255, 94, 70);
 }
 
 /* ####################################### */
@@ -32,10 +33,10 @@ a:visited {
     align-items: center;
     padding: 0 20px;
     background-color: bisque;
-    color: hsl(8.1, 100%, 60.8%);
+    color: var(--orange);
     height: 50px;
     font-size: 1.2em;
-    border-bottom: 4px solid hsl(8.1, 100%, 60.8%);
+    border-bottom: 4px solid var(--orange);
 }
 
 .navbar > div > a {
@@ -43,7 +44,7 @@ a:visited {
 }
 
 .navbar > div > a:hover {
-    background-color: hsl(8.1, 100%, 60.8%);
+    background-color: var(--orange);
     color: bisque;
 }
 
@@ -76,7 +77,8 @@ a:visited {
 .content > div > h1 {
     font-size: 4.5em;
     text-align: center;
-    color: hsl(8.1, 100%, 60.8%);
+    color: var(--orange);
+    font-family: "Spectral";
 }
 
 .content > div:first-of-type > h1 {
@@ -94,11 +96,16 @@ a:visited {
 .intro h1 {
     margin-bottom: 0px;
     font-size: 4em;
+    font-family: "Spectral";
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
 .intro p {
     text-align: center;
     font-size: 1.5em;
+    font-family: "Montserrat";
+    /* text-transform: uppercase; */
 }
 
 .stack-icons {
@@ -124,7 +131,7 @@ a:visited {
 }
 
 .project-item {
-    border: 2px solid hsl(8.1, 100%, 60.8%);
+    border: 2px solid var(--orange);
     display: grid;
     grid-template-areas:
     'title title'
@@ -139,7 +146,7 @@ a:visited {
     margin: 0;
     color: bisque;
     padding: 5px;
-    background-color: hsl(8.1, 100%, 60.8%);
+    background-color: var(--orange);
 }
 
 .project-item > p {
@@ -156,7 +163,7 @@ a:visited {
 
 .project-item > img {
     grid-area: picture;
-    border: 1px solid hsl(8.1, 100%, 60.8%);
+    border: 1px solid var(--orange);
 }
 
 .about-container {
@@ -186,7 +193,7 @@ a:visited {
     "skills experience"
     "education experience";
     grid-template-columns: 0.3fr 0.7fr;
-    column-gap: 5vw;
+    column-gap: 3vw;
     padding-left: 15vw;
     padding-right: 15vw;
 }

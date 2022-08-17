@@ -174,22 +174,24 @@ a:visited {
 
 .about-container {
     display: flex;
-    gap: 50px;
     align-items: center;
     justify-content: center;
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
+    text-align: justify;
 }
 
 .about-container > div {
-    width: max(400px, 50vw);
+    width: max(400px, 45vw);
 }
 
 .about-container > img {
     border: 1px solid black;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 350px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
 }
 
 .resume-grid {

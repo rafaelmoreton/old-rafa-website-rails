@@ -179,18 +179,22 @@ a:visited {
     flex-direction: row-reverse;
     flex-wrap: wrap-reverse;
     text-align: justify;
+    padding: 0 50px;
+    gap: 50px;
 }
 
 .about-container > div {
-    width: max(400px, 45vw);
+    flex: 0.3 500px ;
+}
+
+.about-container > div > p:first-of-type {
+    margin-top: 0;
 }
 
 .about-container > img {
     border: 1px solid black;
     width: 250px;
     height: 350px;
-    margin-left: 50px;
-    margin-right: 50px;
     margin-bottom: 30px;
 }
 

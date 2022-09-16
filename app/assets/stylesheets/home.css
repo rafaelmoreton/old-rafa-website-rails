@@ -181,14 +181,20 @@ a:visited {
     text-align: justify;
 }
 
-.project-item > div {
+.project-links {
     grid-area: links;
     padding: 10px;
 }
 
-.project-item > img {
+.project-demo-image {
     grid-area: picture;
     border: 1px solid var(--orange);
+}
+
+.project-demo-image > img {
+    margin-top: 50%;
+    margin-bottom: 50%;
+    max-width: 100%;
 }
 
 .about-container {

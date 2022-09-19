@@ -185,7 +185,22 @@ a:visited {
 
 .project-links {
     grid-area: links;
+    display: flex;
+    height: fit-content;
+    align-self: flex-end;
+}
+
+.project-links > a {
+    flex-grow: 1;
+    text-align: center;
     padding: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.project-links > a:hover {
+    text-decoration: underline;
 }
 
 .project-demo-image {

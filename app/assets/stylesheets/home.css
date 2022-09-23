@@ -169,12 +169,16 @@ a:visited {
     grid-template-columns: 65%;
 }
 
-.project-item > h1 {
+.project-item > a {
     grid-area: title;
-    margin: 0;
     color: bisque;
     padding: 5px;
     background-color: var(--orange);
+}
+
+.project-item > a > h1 {
+    margin: 0;
+
 }
 
 .project-item > p {
@@ -214,7 +218,7 @@ a:visited {
     background-color: rgb(171, 155, 134);
 }
 
-.project-demo-image > img {
+.project-demo-image > a > img {
     flex-grow: 0.3;
     max-width: 100%;
 }

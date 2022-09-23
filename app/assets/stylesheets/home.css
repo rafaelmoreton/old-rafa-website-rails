@@ -88,8 +88,11 @@ a:visited {
     font-size: 4.5em;
     text-align: center;
     color: var(--orange);
-    text-shadow: 1px 1px 3px rgb(124, 46, 34);
     font-family: "Spectral";
+}
+
+.content > div:first-of-type > h1 {
+    text-shadow: 1px 1px 3px rgb(124, 46, 34);
 }
 
 .content > div:first-of-type > h1 {

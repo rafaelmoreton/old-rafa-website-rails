@@ -1,20 +1,24 @@
 <div class="navbar">
     <div class="navbar-left">
         <a href="">Rafael Moreton</a>
-        <a href="?locale=pt">Português <%= image_tag "flag-br.svg", class: 'flag-icon' %></a>
+        <% unless params[:locale] == "pt" %>
+            <a href="?locale=pt">Português <%= image_tag "flag-br.svg", class: 'flag-icon' %></a>
+        <% else %>
+            <a href="?locale=en">English <%= image_tag "flag-us.svg", class: 'flag-icon' %></a>
+        <% end %>
     </div>
     <div class="navbar-right">
-        <a href="#projects-anchor">Projects</a>
-        <a href="#about-anchor">About me</a>
-        <a href="#resume-anchor">Résumé</a>
-        <a href="#contact-anchor">Contact</a>
+        <a href="#projects-anchor"><%= t('projects')%></a>
+        <a href="#about-anchor"><%= t('about')%></a>
+        <a href="#resume-anchor"><%= t('resume')%></a>
+        <a href="#contact-anchor"><%= t('contact')%></a>
     </div>
 </div>
 
 <div class="content">
     <div class="intro">
         <h1>Rafael Moreton</h1>
-        <p>Full-stack web developer</p>
+        <p><%= t('role') %></p>
         <div class="stack-icons">
             <div class="73px">
                 <%= image_tag "html-5.svg" %>
@@ -42,16 +46,16 @@
 
     
     <div id="projects-anchor" class="projects">
-        <h1>Projects</h1>
+        <h1><%= t('projects') %></h1>
         <div class="projects-grid">
             <div class="project-item">
                 <a href="https://github.com/rafaelmoreton/chess">
                     <h1>CLI Chess</h1>
                 </a>
-                <p>This is a chess game written fully in Ruby to be played in the command-line interface by two local players. It enforces all the expected rules of chess and allows games to be saved and resumed later.</p>
+                <p><%= t('chess-project-description') %></p>
                 <div class="project-links">
-                    <a href="https://github.com/rafaelmoreton/chess">Source Code</a>
-                    <a href="https://replit.com/@rafaelmoreton/chess#">Live Preview</a>
+                    <a href="https://github.com/rafaelmoreton/chess"><%= t('source-code') %></a>
+                    <a href="https://replit.com/@rafaelmoreton/chess#"><%= t('live-preview') %></a>
                 </div>
                 <div class="project-demo-image">
                     <a href="https://replit.com/@rafaelmoreton/chess#">
@@ -63,11 +67,10 @@
                 <a href="https://github.com/rafaelmoreton/flight-booker">
                     <h1>Flight Booker</h1>
                 </a>
-                <p>The app allows users to select desired dates and airports, presents them a list of corresponding available flights, allows them to select the desired flight and enter passenger informations for all passengers.
-                </p>
+                <p><%= t("flight-project-description") %></p>
                 <div class="project-links">
-                    <a href="https://github.com/rafaelmoreton/flight-booker">Source Code</a>
-                    <a href="https://flight-booker-194519.herokuapp.com/">Live Preview</a>
+                    <a href="https://github.com/rafaelmoreton/flight-booker"><%= t('source-code') %></a>
+                    <a href="https://flight-booker-194519.herokuapp.com/"><%= t('live-preview') %></a>
                 </div>
                 <div class="project-demo-image">
                     <a href="https://flight-booker-194519.herokuapp.com/">
@@ -79,10 +82,10 @@
                 <a href="https://github.com/rafaelmoreton/private-events">
                     <h1>Private Events</h1>
                 </a>
-                <p>This site allows users to create and manage events. Anyone can see available events, but only signed in users may confirm attendance to them and create new ones.</p>
+                <p><%= t("events-project-description") %></p>
                 <div class="project-links">
-                    <a href="https://github.com/rafaelmoreton/private-events">Source Code</a>
-                    <a href="https://private-events-191919.herokuapp.com/">Live Preview</a>
+                    <a href="https://github.com/rafaelmoreton/private-events"><%= t('source-code') %></a>
+                    <a href="https://private-events-191919.herokuapp.com/"><%= t('live-preview') %></a>
                 </div>
                 <div class="project-demo-image">
                     <a href="https://private-events-191919.herokuapp.com/">
@@ -94,10 +97,10 @@
                 <a href="https://github.com/rafaelmoreton/etch-a-sketch">
                     <h1>Etch-a-Sketch</h1>
                 </a>
-                <p>A browser pixel drawing tool. It is entirely front-end: JavaScript used to manipulate the page's DOM elements and CSS properties accordingly to mouse input event listeners.</p>
+                <p><%= t("sketch-project-description") %></p>
                 <div class="project-links">
-                    <a href="https://github.com/rafaelmoreton/etch-a-sketch">Source Code</a>
-                    <a href="https://rafaelmoreton.github.io/etch-a-sketch/">Live Preview</a>
+                    <a href="https://github.com/rafaelmoreton/etch-a-sketch"><%= t('source-code') %></a>
+                    <a href="https://rafaelmoreton.github.io/etch-a-sketch/"><%= t('live-preview') %></a>
                 </div>
                 <div class="project-demo-image">
                     <a href="https://rafaelmoreton.github.io/etch-a-sketch/">
@@ -109,10 +112,10 @@
                 <a href="https://github.com/rafaelmoreton/connect-four">
                     <h1>Connect Four</h1>
                 </a>
-                <p>A Connect Four game to be played between two local players in the command line. It was entirely developed with a TDD approach using the Rspec gem. The app enforces the game rules and recognizes the end of match conditions.</p>
+                <p><%= t("connect-project-description") %></p>
                 <div class="project-links">
-                    <a href="https://github.com/rafaelmoreton/connect-four">Source Code</a>
-                    <a href="https://replit.com/@rafaelmoreton/connect-four#">Live Preview</a>
+                    <a href="https://github.com/rafaelmoreton/connect-four"><%= t('source-code') %></a>
+                    <a href="https://replit.com/@rafaelmoreton/connect-four#"><%= t('live-preview') %></a>
                 </div>
                 <div class="project-demo-image">
                     <a href="https://replit.com/@rafaelmoreton/connect-four#">
@@ -124,10 +127,10 @@
                 <a href="https://github.com/rafaelmoreton/admin-dashboard">
                     <h1>Admin Dashboard</h1>
                 </a>
-                <p>This page is mainly a CSS grid practice. I cloned this widespread dashboard design by eye. It's a single static page - the grid layout and responsiveness learning were the main point of this project.</p>
+                <p><%= t("dashboard-project-description") %></p>
                 <div class="project-links">
-                    <a href="https://github.com/rafaelmoreton/admin-dashboard">Source Code</a>
-                    <a href="https://rafaelmoreton.github.io/admin-dashboard/">Live Preview</a>
+                    <a href="https://github.com/rafaelmoreton/admin-dashboard"><%= t('source-code') %></a>
+                    <a href="https://rafaelmoreton.github.io/admin-dashboard/"><%= t('live-preview') %></a>
                 </div>
                 <div class="project-demo-image">
                     <a href="https://rafaelmoreton.github.io/admin-dashboard/">
@@ -139,10 +142,10 @@
                 <a href="https://github.com/rafaelmoreton/calculator">
                     <h1>Calculator</h1>
                 </a>
-                <p>A JavaScript browser calculator. It supports the four basic arithmetic operations (add, subtract, multiply and divide) and can be used with a either a mouse or a keyboard.</p>
+                <p><%= t("calculator-project-description") %></p>
                 <div class="project-links">
-                    <a href="https://github.com/rafaelmoreton/calculator">Source Code</a>
-                    <a href="https://rafaelmoreton.github.io/calculator/">Live Preview</a>
+                    <a href="https://github.com/rafaelmoreton/calculator"><%= t('source-code') %></a>
+                    <a href="https://rafaelmoreton.github.io/calculator/"><%= t('live-preview') %></a>
                 </div>
                 <div class="project-demo-image">
                     <a href="https://rafaelmoreton.github.io/calculator/">
@@ -155,13 +158,13 @@
 
     
     <div id="about-anchor" class="about">
-        <h1>About me</h1>
+        <h1><%= t("about") %></h1>
         <div class="about-container">
             <div>
-                <p>Hello, I'm Rafael Moreton. I've always been a technology enthusiast and recently found out my vocation in it. At the beginning of the pandemic, with jobs and classes paralysed, I decided to spend my time learning how to code, at first as a hobby - an old interest of mine which, until then, I hadn't dedicated much time to. That was when I realized how much this was capable of stimulating me. I discovered once more the satisfaction of inventing ways to approach a complex logical problem until I manage to solve it. I decided to make a career out of it when I realized that by developing pages and applications for the web I could combine my best abilities into a very fulfilling trade.</p>
-                <p>When I was a mechanical technician, I developed an analytical and methodological eye for finding out the origin of mechanical failures; on the other hand, I felt repelled by the likelihood of permanent health damages caused by the insalubrity of factory work. As an actor, I discovered that creating collectively is invigorating for me. I learned to work with the variety of ideas that are naturally born from groups for furthering creative collaboration. Finally, working as a lighting technician, I could begin to put together my creative and logical knacks: to conceive lighting designs and make them into reality by applying technical knowledge.</p>
-                <p>At the beginning of my self-learning journey I luckily found “The Odin Project”, an open-source curriculum created by developers to teach everything needed to become a full-stack developer. The assigned projects specify the requirements and give some brief instructions, very different from hand-holding tutorials, because the students are asked to find out their own solutions. That's how I earned the confidence and mindset to solve any problem that might arise during development - by finding ways for breaking it into smaller parts, looking for solutions to similar problems and studying the documentation of the tech-stack.</p>
-                <p>After many hours stuck at problems and finding a way out; making hundreds of mistakes from which I learned something more, I feel that I'm ready to be challenged by bigger problems. I believe that every industry can find new solutions through technology and that the best way for me to keep improving is by contributing to this.</p>
+                <p><%= t('about-p1') %></p>
+                <p><%= t('about-p2') %></p>
+                <p><%= t('about-p3') %></p>
+                <p><%= t('about-p4') %></p>
             </div>
             <%# <img src="" alt="Profile pic"> %>
         </div>
@@ -169,14 +172,14 @@
 
     
     <div id="resume-anchor" class="resume-container">
-        <h1>Résumé</h1>
+        <h1><%= t('resume') %></h1>
         <div class="resume-grid">
             <div class="resume-summary-container">
-                <h2>Summary</h2>
-                <p>Self-taught full-stack web developer entering the industry. Past experiences based on teamwork and problem-solving in technical and artistic fields.</p>
+                <h2><%= t("summary") %></h2>
+                <p><%= t('summary-p') %></p>
             </div>
             <div class="resume-skills-container">
-                <h2>Skills</h2>
+                <h2><%= t("skills") %></h2>
                 <ul>
                     <li>HTML5, CSS3</li>
                     <li>JavaScript</li>
@@ -186,44 +189,44 @@
                     <li>Heroku</li>
                     <li>TDD</li>
                     <li>OOP</li>
-                    <li>Portuguese</li>
+                    <li><%= t('language') %></li>
                 </ul>
             </div>
             <div class="resume-education-container">
-                <h2>Education</h2>
-                <h3>University of São Paulo</h3>
-                <p class="subheader">Performing Arts Bachelor's Degree</p>
-                <p class="education-infos">2013-2020, completed 262 credits</p>
-                <h3>SP Drama School</h3>
-                <p class="subheader">Lighting Design Certificate</p>
+                <h2><%= t("education") %></h2>
+                <h3><%= t('usp') %></h3>
+                <p class="subheader"><%= t('usp-subhead') %></p>
+                <p class="education-infos">2013-2020<%= t('usp-info') %></p>
+                <h3><%= t('spteatro') %></h3>
+                <p class="subheader"><%= t('spteatro-subhead') %></p>
                 <p class="education-infos">2017</p>
-                <h3>São Paulo Federal Institute</h3>
-                <p class="subheader">Industrial Mechanics Certificate</p>
+                <h3><%= t('ifsp') %></h3>
+                <p class="subheader"><%= t('ifsp-subhead') %></p>
                 <p class="education-infos">2012</p>
             </div>
             <div class="resume-experience-container">
-                <h2>Experience</h2>
-                <h3>Lighting Technician</h3>
-                <p class="subheader">Vendedor de Sonhos - September 2018 - January 2020</p>
+                <h2><%= t("experience") %></h2>
+                <h3><%= t('light-tech') %></h3>
+                <p class="subheader"><%= t('light-tech-subhead') %></p>
                 <ul>
-                    <li>I was a technician of the play “The Dreamseller”, on tour through several states of Brazil.</li>
-                    <li>During the tour I was responsible for coordinating the lighting and scenery rigging with the theater's technicians and, during the show, operating the lighting and sound controllers.</li>
-                    <li>In the months prior to the tour I got in touch with the theaters where the play would happen in order to learn about the available space, crew size, time and lighting fixtures available and adapted the light design accordingly.</li>
-                    <li>I read the documentation of several lighting controllers and taught myself how to set up and operate them.</li>
+                    <li><%= t('light-tech-info-1') %></li>
+                    <li><%= t('light-tech-info-2') %></li>
+                    <li><%= t('light-tech-info-3') %></li>
+                    <li><%= t('light-tech-info-4') %></li>
                 </ul>
-                <h3>Performer</h3>
-                <p class="subheader">Voar, um Musiclown - March 2014 - August 2016</p>
+                <h3><%= t('performer') %></h3>
+                <p class="subheader"><%= t('performer-subhead') %></p>
                 <ul>
-                    <li>Initially, a study group composed of undergraduate students of Performing Arts interested in studying the clown language juxtaposed with that of musical theater. The group consolidated itself with the authoral play “Voar, um Musiclown”.</li>
-                    <li>I created scenes collaboratively with ten other actors, developing the ideas proposed by them and also proposing mine.</li>
+                    <li><%= t('performer-info-1') %></li>
+                    <li><%= t('performer-info-2') %></li>
                 </ul>
-                <h3>Mechanical Technician</h3>
-                <p class="subheader">Pirelli - January 2012 - July 2012</p>
+                <h3><%= t('mech-tech') %></h3>
+                <p class="subheader"><%= t('mech-tech-subhead') %></p>
                 <ul>
-                    <li>I was part of the maintenance team with four other technicians. We were responsible for granting the proper functioning of the tire-building machinery.</li>
-                    <li>We had weekly meetings with the operational department management to organize the work using the Kanban methodology. We reported results, offered solutions to newly found issues and defined the next assignments.</li>
-                    <li>I used to investigate machines that were producing items out of quality standard to determine the cause of it and then made the adjustment on them.</li>
-                    <li>I used to inspect, clean and lubricate bearings, change damaged air-chambers and control the inventory of materials used by my team.</li>
+                    <li><%= t('mech-tech-info-1') %></li>
+                    <li><%= t('mech-tech-info-2') %></li>
+                    <li><%= t('mech-tech-info-3') %></li>
+                    <li><%= t('mech-tech-info-4') %></li>
                 </ul>
             </div>
         </div>
@@ -231,7 +234,7 @@
 
     
     <div id="contact-anchor" class="contact-container">
-        <h1>Contact</h1>
+        <h1><%= t('contact') %></h1>
         <div class="contact-grid">
             <div class="contact-item first-column">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -239,7 +242,7 @@
             </div>
             <div class="contact-item first-column">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <p>São Paulo, Brazil</p>
+                <p><%= t("address") %></p>
             </div>
             <a class="contact-item second-column first-row" href="mailto:rafaelmoreton@gmail.com">
                 <p>Email</p>

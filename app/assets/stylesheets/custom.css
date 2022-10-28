@@ -1,3 +1,31 @@
+/* Palette */
+:root {
+    --white: #CEE9B6;
+    --blueish: #5E9387;
+    --greenish: #8FC79A;
+    --bluegreen: #2D8D79;
+}
+
+/* Colors */
+
+.bg {
+    background-color: var(--white);
+}
+
+.bg-blueish {
+    background-color: var(--blueish);
+}
+
+.bg-greenish {
+    background-color: var(--greenish);
+}
+
+.bg-bluegreen {
+    background-color: var(--bluegreen);
+}
+
+/*     */
+
 .flag-icon {
     width: 25px;
 }

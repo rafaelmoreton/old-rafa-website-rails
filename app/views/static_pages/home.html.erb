@@ -168,8 +168,8 @@
         </div>
     </div>
 
-    
-    <div id="about-anchor" class="about">
+    <%# About %>
+    <div id="about-anchor" class="container w-75">
         <h1><%= t("about") %></h1>
         <div class="about-container">
             <div>
@@ -182,41 +182,45 @@
         </div>
     </div>
 
-    
-    <div id="resume-anchor" class="resume-container">
+    <%# Resume %>
+    <div id="resume-anchor" class="container w-75">
         <h1><%= t('resume') %></h1>
-        <div class="resume-grid">
-            <div class="resume-summary-container">
-                <h2><%= t("summary") %></h2>
-                <p><%= t('summary-p') %></p>
+
+        <div class="row">
+            <div class="col-4">
+                <div>
+                    <h2><%= t("summary") %></h2>
+                    <p><%= t('summary-p') %></p>
+                </div>
+                <div>
+                    <h2><%= t("skills") %></h2>
+                    <ul>
+                        <li>HTML5, CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Ruby / Rspec, Rails</li>
+                        <li>SQL</li>
+                        <li>Git / Github</li>
+                        <li>Heroku</li>
+                        <li>TDD</li>
+                        <li>OOP</li>
+                        <li><%= t('language') %></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2><%= t("education") %></h2>
+                    <h3><%= t('usp') %></h3>
+                    <p class="subheader"><%= t('usp-subhead') %></p>
+                    <p class="education-infos">2013-2020<%= t('usp-info') %></p>
+                    <h3><%= t('spteatro') %></h3>
+                    <p class="subheader"><%= t('spteatro-subhead') %></p>
+                    <p class="education-infos">2017</p>
+                    <h3><%= t('ifsp') %></h3>
+                    <p class="subheader"><%= t('ifsp-subhead') %></p>
+                    <p class="education-infos">2012</p>
+                </div>
             </div>
-            <div class="resume-skills-container">
-                <h2><%= t("skills") %></h2>
-                <ul>
-                    <li>HTML5, CSS3</li>
-                    <li>JavaScript</li>
-                    <li>Ruby / Rspec, Rails</li>
-                    <li>SQL</li>
-                    <li>Git / Github</li>
-                    <li>Heroku</li>
-                    <li>TDD</li>
-                    <li>OOP</li>
-                    <li><%= t('language') %></li>
-                </ul>
-            </div>
-            <div class="resume-education-container">
-                <h2><%= t("education") %></h2>
-                <h3><%= t('usp') %></h3>
-                <p class="subheader"><%= t('usp-subhead') %></p>
-                <p class="education-infos">2013-2020<%= t('usp-info') %></p>
-                <h3><%= t('spteatro') %></h3>
-                <p class="subheader"><%= t('spteatro-subhead') %></p>
-                <p class="education-infos">2017</p>
-                <h3><%= t('ifsp') %></h3>
-                <p class="subheader"><%= t('ifsp-subhead') %></p>
-                <p class="education-infos">2012</p>
-            </div>
-            <div class="resume-experience-container">
+
+            <div class="col-8">
                 <h2><%= t("experience") %></h2>
                 <h3><%= t('light-tech') %></h3>
                 <p class="subheader"><%= t('light-tech-subhead') %></p>
@@ -241,6 +245,7 @@
                     <li><%= t('mech-tech-info-4') %></li>
                 </ul>
             </div>
+
         </div>
     </div>
 

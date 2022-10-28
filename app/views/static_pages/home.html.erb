@@ -1,3 +1,4 @@
+<%# Navbar %>
 <div class="container-fluid d-flex justify-content-between p-2">
 
     <div>
@@ -18,31 +19,38 @@
 
 </div>
 
-<div class="content">
-    <div class="intro">
+<%# Content %>
+<div class="container-fluid">
+
+    <%# Intro %>
+    <div class="container d-flex flex-column align-items-center">
         <h1>Rafael Moreton</h1>
         <p><%= t('role') %></p>
-        <div class="stack-icons">
-            <div class="73px">
-                <%= image_tag "html-5.svg" %>
+        <div class="container w-50">
+            <div class="row text-center">
+                <div class="73px col">
+                    <%= image_tag "html-5.svg" %>
+                </div>
+                <div class="73px col">
+                    <%= image_tag "css-3.svg" %>
+                </div>
+                <div class="83px col">
+                    <%= image_tag "javascript.svg" %>
+                </div>
+                <div class="83px col">
+                    <%= image_tag "git-icon.svg" %>
+                </div>
             </div>
-            <div class="73px">
-                <%= image_tag "css-3.svg" %>
-            </div>
-            <div class="83px">
-                <%= image_tag "javascript.svg" %>
-            </div>
-            <div class="83px">
-                <%= image_tag "git-icon.svg" %>
-            </div>
-            <div class="83px">
-                <%= image_tag "ruby.svg" %>
-            </div>
-            <div class="273px">
-                <%= image_tag "rails.svg" %>
-            </div>
-            <div class="75px">
-                <%= image_tag "heroku-icon.svg" %>
+            <div class="row text-center">
+                <div class="83px col">
+                    <%= image_tag "ruby.svg" %>
+                </div>
+                <div class="273px col">
+                    <%= image_tag "rails.svg" %>
+                </div>
+                <div class="75px col">
+                    <%= image_tag "heroku-icon.svg" %>
+                </div>
             </div>
         </div>
     </div>

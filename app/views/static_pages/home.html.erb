@@ -1,5 +1,6 @@
-<div class="navbar">
-    <div class="navbar-left">
+<div class="container-fluid d-flex justify-content-between p-2">
+
+    <div>
         <a href="">Rafael Moreton</a>
         <% unless params[:locale] == "pt" %>
             <a href="?locale=pt">Português <%= image_tag "flag-br.svg", class: 'flag-icon' %></a>
@@ -7,12 +8,14 @@
             <a href="?locale=en">English <%= image_tag "flag-us.svg", class: 'flag-icon' %></a>
         <% end %>
     </div>
-    <div class="navbar-right">
+
+    <div>
         <a href="#projects-anchor"><%= t('projects')%></a>
         <a href="#about-anchor"><%= t('about')%></a>
         <a href="#resume-anchor"><%= t('resume')%></a>
         <a href="#contact-anchor"><%= t('contact')%></a>
     </div>
+
 </div>
 
 <div class="content">

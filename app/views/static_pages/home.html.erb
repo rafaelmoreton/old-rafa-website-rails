@@ -1,5 +1,5 @@
 <%# Navbar %>
-<div class="container-fluid d-flex justify-content-between p-2 bg-greenish">
+<div class="d-flex justify-content-between p-2 bg-greenish">
 
     <div>
         <a href="">Rafael Moreton</a>
@@ -20,10 +20,10 @@
 </div>
 
 <%# Content %>
-<div class="container w-75">
+<div>
 
     <%# Intro %>
-    <div class="container d-flex flex-column align-items-center bg-blueish">
+    <div class="d-flex flex-column align-items-center bg-blueish">
         <h1>Rafael Moreton</h1>
         <p><%= t('role') %></p>
         <div class="container w-50">
@@ -171,15 +171,13 @@
     <%# About %>
     <div class="bg-blueish" id="about-anchor">
         <h1 class="text-center"><%= t("about") %></h1>
-        <div class="about-container">
-            <div>
-                <p><%= t('about-p1') %></p>
-                <p><%= t('about-p2') %></p>
-                <p><%= t('about-p3') %></p>
-                <p><%= t('about-p4') %></p>
-            </div>
-            <%# <img src="" alt="Profile pic"> %>
+        <div>
+            <p><%= t('about-p1') %></p>
+            <p><%= t('about-p2') %></p>
+            <p><%= t('about-p3') %></p>
+            <p><%= t('about-p4') %></p>
         </div>
+        <%# <img src="" alt="Profile pic"> %>
     </div>
 
     <%# Resume %>

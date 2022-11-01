@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700&family=Source+Sans+Pro:wght@200;400;700&family=Spectral:wght@200;300;500&display=swap');
 
-* {
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
 /* QUICKFIX: Keep layout from breaking on lower width viewport. */
 html {
     min-width: 700px;
@@ -38,6 +34,9 @@ a:visited {
 }
 
 /* ####################################### */
+/* ########### GENERAL CLASSES ########### */
+
+
 
 .navbar {
     position: sticky;
@@ -51,6 +50,7 @@ a:visited {
     height: 50px;
     font-size: 1.2em;
     border-bottom: 4px solid var(--orange);
+    font-family: "Montserrat", sans-serif;
 }
 
 .navbar > div > a {
@@ -98,16 +98,14 @@ a:visited {
     font-size: 4.5em;
     text-align: center;
     color: var(--orange);
-    font-family: "Spectral";
+    font-family: "Open Sans Pro", sans-serif;
 }
 
 .content > div:first-of-type > h1 {
     text-shadow: 1px 1px 3px var(--f-shadow);
-}
-
-.content > div:first-of-type > h1 {
     font-size: min(6em, max(20vh, 70px));
     margin-top: 0;
+    margin-bottom: 0px;
 }
 
 .intro {
@@ -118,20 +116,12 @@ a:visited {
     height: max(300px, calc(100vh - 50px));
 }
 
-.intro h1 {
-    margin-bottom: 0px;
-    font-size: 4em;
-    font-family: "Spectral";
-    font-weight: 300;
-    text-transform: uppercase;
-}
-
 .intro p {
     text-align: center;
-    font-size: 1.5em;
-    font-family: "Montserrat";
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
     margin: min(5vh, 24px);
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
 }
 
 .stack-icons {
@@ -177,6 +167,7 @@ a:visited {
     'links picture';
     grid-template-rows: 50px auto 45px;
     grid-template-columns: 65%;
+    font-family: "Open Sans Pro", sans-serif;
 }
 
 .project-item > a {
@@ -188,7 +179,7 @@ a:visited {
 
 .project-item > a > h1 {
     margin: 0;
-
+    font-family: "Montserrat", sans-serif;
 }
 
 .project-item > p {
@@ -205,6 +196,7 @@ a:visited {
     display: flex;
     height: fit-content;
     align-self: flex-end;
+    font-family: "Montserrat", sans-serif;
 }
 
 .project-links > a {
@@ -242,6 +234,7 @@ a:visited {
     text-align: justify;
     padding: 0 50px;
     gap: 50px;
+    font-family: "Spectral", serif;
 }
 
 .about-container > div {
@@ -269,6 +262,7 @@ a:visited {
     column-gap: 3vw;
     padding-left: 15vw;
     padding-right: 15vw;
+    font-family: "Montserrat", sans-serif;
 }
 
 .resume-grid > div > h2 {
@@ -286,6 +280,7 @@ a:visited {
 .resume-summary-container {
     grid-area: summary;
     text-align: justify;
+    font-family: "Spectral", serif;
 }
 
 .resume-skills-container {
@@ -325,6 +320,7 @@ a:visited {
 .resume-experience-container > ul > li {
     margin-bottom: 5px;
     font-size: 1.1em;
+    font-family: "Spectral", serif;
 }
 
 .subheader {
@@ -345,6 +341,7 @@ a:visited {
     column-gap: 5vw;
     row-gap: 20px;
     font-size: 1.4em;
+    font-family: "Montserrat", sans-serif;
 }
 
 .first-column {

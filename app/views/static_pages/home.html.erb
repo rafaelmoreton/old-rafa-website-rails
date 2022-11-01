@@ -6,7 +6,22 @@
         <% else %>
             <a href="?locale=en">English <%= image_tag "flag-us.svg", class: 'flag-icon' %></a>
         <% end %>
+
+        <!-- Trigger/Open The Menu -->
+        <button id="navBtn">Open Menu</button>
+        <!-- The Menu -->
+        <div id="navMenu" class="menu">
+            <div  class="menu-content">
+                <span class="close">&times;</span>
+                <a class="menu-link" href="#projects-anchor"><%= t('projects')%></a>
+                <a class="menu-link" href="#about-anchor"><%= t('about')%></a>
+                <a class="menu-link" href="#resume-anchor"><%= t('resume')%></a>
+                <a class="menu-link" href="#contact-anchor"><%= t('contact')%></a>
+            </div>
+        </div>
+
     </div>
+
     <div class="navbar-right">
         <a href="#projects-anchor"><%= t('projects')%></a>
         <a href="#about-anchor"><%= t('about')%></a>
@@ -259,3 +274,4 @@
         </div>
     </div>
 </div>
+

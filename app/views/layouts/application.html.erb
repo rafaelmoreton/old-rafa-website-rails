@@ -13,4 +13,36 @@
   <body>
     <%= yield %>
   </body>
+  <script>
+    window.addEventListener("turbo:load", () =>{
+        const menu = document.getElementById("navMenu");
+        const btn = document.getElementById("navBtn");
+        const span = document.getElementsByClassName("close")[0];
+        const menuLink = document.querySelectorAll(".menu-link")
+
+        // When the user clicks on the button, open the menu
+        btn.onclick = function() {
+        menu.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the menu
+        span.onclick = function() {
+        menu.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the menu, close it
+        window.onclick = function(event) {
+        if (event.target == menu) {
+            menu.style.display = "none";
+        }}
+
+        // When the user clicks a menu link, close the menu
+        menuLink.forEach(link => {
+            link.addEventListener("click", () => {
+              console.log("I was clicked");
+              menu.style.display = "none";
+              });
+        });
+    });
+</script>
 </html>

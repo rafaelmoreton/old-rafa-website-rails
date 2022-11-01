@@ -6,7 +6,9 @@
         <% else %>
             <a href="?locale=en">English <%= image_tag "flag-us.svg", class: 'flag-icon' %></a>
         <% end %>
+    </div>
 
+    <div class="navbar-right">
         <!-- Trigger/Open The Menu -->
         <button id="navBtn">Open Menu</button>
         <!-- The Menu -->
@@ -19,10 +21,6 @@
                 <a class="menu-link" href="#contact-anchor"><%= t('contact')%></a>
             </div>
         </div>
-
-    </div>
-
-    <div class="navbar-right">
         <a href="#projects-anchor"><%= t('projects')%></a>
         <a href="#about-anchor"><%= t('about')%></a>
         <a href="#resume-anchor"><%= t('resume')%></a>

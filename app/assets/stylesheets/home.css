@@ -36,8 +36,6 @@ a:visited {
 /* ####################################### */
 /* ########### GENERAL CLASSES ########### */
 
-
-
 .navbar {
     position: sticky;
     top: 0;
@@ -55,13 +53,31 @@ a:visited {
 
 .navbar > div > a {
     padding: 14px 10px;
-    display: inline-flex;
     gap: 10px;
 }
 
 .navbar > div > a:hover {
     background-color: var(--orange);
     color: var(--light);
+}
+
+#navBtn {
+    display: none;
+}
+
+.navbar-right > a {
+    display: none;
+}
+@media (max-width: 1000px) {
+    #navBtn {
+        display: block;
+    }
+
+}
+@media (min-width: 1000px) {
+    .navbar-right > a {
+        display: inline-flex;
+    }
 }
 
 .flag-icon  {
@@ -401,27 +417,28 @@ a:visited {
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
-  
-  /* Menu Content/Box */
-  .menu-content {
+
+/* Menu Content/Box */
+.menu-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
+}
+
+/* The Close Button */
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
+

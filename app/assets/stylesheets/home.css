@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700&family=Source+Sans+Pro:wght@200;400;700&family=Spectral:wght@200;300;500&display=swap');
 
-/* QUICKFIX: Keep layout from breaking on lower width viewport. */
-html {
-    min-width: 700px;
-}
-
 /* ####################################### */
 /* ########### GLOBAL VARIABLES ########## */
 
@@ -268,6 +263,8 @@ a:visited {
     margin-bottom: 30px;
 }
 
+/* ####################################### */
+
 .resume-grid {
     display: grid;
     grid-template-areas:
@@ -296,6 +293,9 @@ a:visited {
 .resume-summary-container {
     grid-area: summary;
     text-align: justify;
+}
+
+.resume-summary-container p {
     font-family: "Spectral", serif;
 }
 
@@ -349,6 +349,29 @@ a:visited {
 
 .education-infos {
     margin-top: 0;
+}
+
+@media (max-width: 1440px) {
+    .resume-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resume-skills-container > ul {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+
+    .resume-skills-container > ul > li {
+        white-space: nowrap;
+    }
+
+    .resume-skills-container > ul > li:not(:last-of-type)::after {
+        margin-left: 20px;
+        content: "•";
+    }
 }
 
 /* ###################################### */

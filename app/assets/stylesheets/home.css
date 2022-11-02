@@ -155,17 +155,22 @@ a:visited {
 
 }
 
-.projects {
-    width: 100%;
-}
+/* ############################################# */
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 0.8fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 0.5fr));
     gap: 15px;
     justify-content: center;
-    padding-left: 15vw;
-    padding-right: 15vw;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1520px) {
+    .projects-grid {
+        max-width: 90vw;
+    }
 }
 
 .project-item {
@@ -176,8 +181,35 @@ a:visited {
     'description picture'
     'links picture';
     grid-template-rows: 50px auto 45px;
-    grid-template-columns: 65%;
+    grid-template-columns: 55%;
     font-family: "Open Sans Pro", sans-serif;
+}
+
+
+@media (max-width: 1350px) {
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 0.4fr));
+        max-width: 80vw;
+    }
+
+    .project-item {
+        display: grid;
+        grid-template-areas:
+        'title title'
+        'picture picture'
+        'description description '
+        'links links';
+        font-family: "Open Sans Pro", sans-serif;
+        grid-template-rows: 50px auto auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 0.8fr));
+        max-width: 90vw;
+    }
 }
 
 .project-item > a {

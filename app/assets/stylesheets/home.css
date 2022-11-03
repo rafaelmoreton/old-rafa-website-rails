@@ -588,10 +588,21 @@ a:visited {
 
 .menu-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 10vh auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 65vw; /* Could be more or less, depending on screen size */
+    height: 70vh;
+}
+
+.container-menu-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    font-size: 200%;
+    text-align: center;
 }
 
 /* The Close Button */

@@ -341,6 +341,12 @@ a:visited {
     margin-bottom: 30px;
 }
 
+@media (max-width: 400px) {
+    .about-container {
+        padding: 0;
+    }
+}
+
 /* ####################################### */
 
 .resume-grid {
@@ -354,8 +360,8 @@ a:visited {
     margin-right: auto;
     grid-template-columns: 1fr 2fr;
     column-gap: 3vw;
-    padding-left: 15vw;
-    padding-right: 15vw;
+    margin-left: auto;
+    margin-right: auto;
     font-family: "Montserrat", sans-serif;
 }
 

@@ -118,6 +118,8 @@ a:visited {
     margin-bottom: 0px;
 }
 
+/* #################################### */
+
 .intro {
     display: flex;
     flex-direction: column;
@@ -136,12 +138,16 @@ a:visited {
 
 .stack-icons {
     margin-top: 5vh;
-    display: flex;
-    justify-content: center;
-    align-content: flex-start;
-    /* gap: 30px; */
-    width: 400px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    min-width: 300px;
+    width: 40vw;
+    max-width: 400px;
+}
+
+.rails {
+    grid-column: 2 / 4;
 }
 
 .stack-icons > div {
@@ -149,10 +155,43 @@ a:visited {
 }
 
 .stack-icons > div > img {
-    object-fit: cover;
-    height: clamp(55px, 10vh, 80px);
+    object-fit: contain;
     width: 100%;
+}
 
+@media (max-width: 320px) {
+
+    .stack-icons {
+        margin-top: 0;
+        min-width: 100px;
+        width: 75vw;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+        "html css java"
+        "rails rails rails"
+        "git ruby heroku";
+    }
+    .html {
+        grid-area: html;
+    }
+    .css {
+        grid-area: css;
+    }
+    .java {
+        grid-area: java;
+    }
+    .rails {
+        grid-area: rails;
+    }
+    .git {
+        grid-area: git;
+    }
+    .ruby {
+        grid-area: ruby;
+    }
+    .heroku {
+        grid-area: heroku;
+    }
 }
 
 /* ############################################# */

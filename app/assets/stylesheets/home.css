@@ -251,6 +251,13 @@ a:visited {
     }
 }
 
+@media (max-width: 300px) {
+    .projects-grid {
+        grid-template-columns: auto;
+    }
+}
+
+
 .project-item > a {
     grid-area: title;
     color: var(--light);

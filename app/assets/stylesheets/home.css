@@ -201,7 +201,7 @@ a:visited {
     grid-template-columns: repeat(auto-fit, minmax(600px, 0.5fr));
     gap: 15px;
     justify-content: center;
-    max-width: 80vw;
+    max-width: min(80vw, 1900px);
     margin-left: auto;
     margin-right: auto;
 }
@@ -256,7 +256,6 @@ a:visited {
         grid-template-columns: auto;
     }
 }
-
 
 .project-item > a {
     grid-area: title;
@@ -313,6 +312,8 @@ a:visited {
     max-width: 100%;
 }
 
+/* ############################################# */
+
 .about-container {
     display: flex;
     align-items: center;
@@ -326,7 +327,7 @@ a:visited {
 }
 
 .about-container > div {
-    flex: 0.3 500px ;
+    max-width: min(80vw, 1400px);
 }
 
 .about-container > div > p:first-of-type {
@@ -348,6 +349,9 @@ a:visited {
     "summary experience"
     "skills experience"
     "education experience";
+    max-width: min(80vw, 1400px);
+    margin-left: auto;
+    margin-right: auto;
     grid-template-columns: 1fr 2fr;
     column-gap: 3vw;
     padding-left: 15vw;

@@ -284,6 +284,7 @@ a:visited {
     height: fit-content;
     align-self: flex-end;
     font-family: "Montserrat", sans-serif;
+    align-items: center;
 }
 
 .project-links > a {
@@ -293,6 +294,7 @@ a:visited {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1.1em;
+    hyphens: manual;
 }
 
 .project-links > a:hover {

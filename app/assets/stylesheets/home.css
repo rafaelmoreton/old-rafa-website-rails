@@ -622,3 +622,81 @@ a:visited {
     cursor: pointer;
 }
 
+/* ########################################### */
+/* Smaller fonts on low width screens */
+@media (max-width: 270px) {
+    p {
+        font-size: 8vw;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar > div > a {
+        font-size: 8vw;
+    }
+
+    .content > div:first-of-type > h1 {
+        font-size: 20vw;
+    }
+
+    .intro p {
+        font-size: 8vw;
+    }
+
+    .content > div > h1 {
+        font-size: 15vw;
+    }
+
+    .resume-grid > div > h2 {
+        font-size: 10vw;
+    }
+
+    .resume-grid > div > h3 {
+        font-size: 9vw;
+    }
+
+    .project-item {
+        grid-template-rows: 20vw auto auto;
+    }
+
+    .project-item > a > h1 {
+        font-size: 12vw;
+    }
+
+    .project-links > a {
+        font-size: 7vw;
+        padding-left: 0;
+        padding-right: 0;
+        width: 0vw;
+    }
+
+    .subheader,
+    .resume-experience-container > ul > li,
+    .resume-skills-container > ul > li {
+        font-size: 8vw;
+    }
+
+    .resume-skills-container > ul > li {
+        white-space: normal;
+    }
+
+    .contact-grid {
+        gap: 10px;
+    }
+
+    .contact-grid > a {
+        min-width: 0;
+        max-width: 60vw;
+        padding: 0;
+    }
+
+    .contact-item > svg {
+        width: 13vw;
+    }
+
+    .content > div:not(:first-of-type) {
+        padding-bottom: 20px;
+    }
+}

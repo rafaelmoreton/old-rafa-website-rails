@@ -625,8 +625,10 @@ a:visited {
 /* ########################################### */
 /* Smaller fonts on low width screens */
 @media (max-width: 270px) {
-    p {
-        font-size: 8vw;
+    p,
+    .resume-experience-container > ul > li,
+    .resume-skills-container > ul > li  {
+        font-size: 5.5vw;
     }
 
     .navbar {
@@ -672,9 +674,7 @@ a:visited {
         width: 0vw;
     }
 
-    .subheader,
-    .resume-experience-container > ul > li,
-    .resume-skills-container > ul > li {
+    .subheader {
         font-size: 8vw;
     }
 

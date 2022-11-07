@@ -603,7 +603,7 @@ a:visited {
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    font-size: 200%;
+    font-size: min(10vw, 48px);
     text-align: center;
 }
 

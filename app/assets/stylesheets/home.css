@@ -633,6 +633,7 @@ a:visited {
 
     .navbar {
         flex-direction: column;
+        height: fit-content;
     }
 
     .navbar > div > a {
